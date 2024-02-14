@@ -10,8 +10,8 @@ app.secret_key = 'your_secret_key'
 # Set up the Shopify session
 shop_url = "https://08dc7a.myshopify.com/admin"
 shopify.ShopifyResource.set_site(shop_url)
-shopify.ShopifyResource.set_user('SHOPIFY_USER')
-shopify.ShopifyResource.set_password('SHOPIFY_PASSWORD')
+shopify.ShopifyResource.set_user(os.environ.get'SHOPIFY_USER')
+shopify.ShopifyResource.set_password(os.environ.get'SHOPIFY_PASSWORD')
 
 # Function to fetch order statuses in parallel
 def get_order_statuses(tracking_numbers):
@@ -170,10 +170,10 @@ def get_orders():
 
 
 def check_database_connection():
-    server = 'SERVER'
-    database = 'DATABASE_NAME'
-    username = 'DATABASE_USERNAME'
-    password = 'DATABASE_PASSWORD'
+    server = os.environ.get'SERVER'
+    database = os.environ.get'DATABASE_NAME'
+    username = os.environ.get'DATABASE_USERNAME'
+    password = os.environ.get'DATABASE_PASSWORD'
 
     try:
         print('Connecting to the database...')
