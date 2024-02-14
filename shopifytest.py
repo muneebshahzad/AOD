@@ -1,4 +1,4 @@
-import concurrent
+import concurrent,os
 import shopify,time
 import requests
 from datetime import datetime, timezone, timedelta
