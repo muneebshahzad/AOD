@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+ <style>
+        #loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #007bff; /* Change color as desired */
+            z-index: 9999;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="color-scheme" content="dark light">
+    <title>AOD- Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="static/assets/css/mainx.css">
+    <link rel="stylesheet" type="text/css" href="static/assets/css/utilitiesx.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="/static/assets/js/mainx.js"></script>
+</head>
+<body>
+<div id="loading-bar"></div>
+
+<div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+
+    <div class="flex-lg-1 h-screen overflow-y-lg-auto">
+        <nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-3"
+             id="topbar">
+            <div class="container-fluid">
+                <form class="form-inline ms-auto me-4 d-none d-md-flex">
+                    <div class="input-group input-group-inline shadow-none"></div>
+                </form>
+                <div class="navbar-user d-none d-sm-block">
+                    <div class="hstack gap-3 ms-4">
+                        <div class="dropdown"><a href="https://clever.webpixels.io/#"
+                                                 class="nav-link px-3 text-base text-muted text-opacity-70 text-opacity-100-hover"
+                                                 id="dropdown-notifications" data-bs-toggle="dropdown"
+                                                 aria-expanded="false"><i class="bi bi-bell-fill"></i></a>
+                            <div class="dropdown-menu dropdown-menu-end px-2" aria-labelledby="dropdown-notifications">
+                                <div class="dropdown-item d-flex align-items-center"><h6
+                                        class="dropdown-header p-0 m-0 font-semibold">Notifications</h6><a
+                                        href="https://clever.webpixels.io/#" class="text-sm font-semibold ms-auto">Clear
+                                    all</a></div>
+                                <div class="dropdown-item py-3 d-flex">
+                                    <div>
+                                        <div class="avatar bg-tertiary text-white rounded-circle">RF</div>
+                                    </div>
+                                    <div class="flex-fill ms-3">
+                                        <div class="text-sm lg-snug w-64 text-wrap"><a
+                                                href="https://clever.webpixels.io/#"
+                                                class="font-semibold text-heading text-primary-hover">Robert</a> sent a
+                                            message to <a href="https://clever.webpixels.io/#"
+                                                          class="font-semibold text-heading text-primary-hover">Webpixels</a>
+                                        </div>
+                                        <span class="text-muted text-xs">30 mins ago</span></div>
+                                </div>
+                                <div class="dropdown-item py-3 d-flex">
+                                    <div><img alt="..." src="static/assets/css/img-1.jpg" class="avatar rounded-circle">
+                                    </div>
+                                    <div class="flex-fill ms-3">
+                                        <div class="text-sm lg-snug w-64 text-wrap"><a
+                                                href="https://clever.webpixels.io/#"
+                                                class="font-semibold text-heading text-primary-hover">Robert</a> sent a
+                                            message to <a href="https://clever.webpixels.io/#"
+                                                          class="font-semibold text-heading text-primary-hover">Webpixels</a>
+                                        </div>
+                                        <span class="text-muted text-xs">30 mins ago</span></div>
+                                </div>
+                                <div class="dropdown-item py-3 d-flex">
+                                    <div><img alt="..." src="static/assets/css/img-2.jpg" class="avatar rounded-circle">
+                                    </div>
+                                    <div class="flex-fill ms-3">
+                                        <div class="text-sm lg-snug w-64 text-wrap"><a
+                                                href="https://clever.webpixels.io/#"
+                                                class="font-semibold text-heading text-primary-hover">Robert</a> sent a
+                                            message to <a href="https://clever.webpixels.io/#"
+                                                          class="font-semibold text-heading text-primary-hover">Webpixels</a>
+                                        </div>
+                                        <span class="text-muted text-xs">30 mins ago</span></div>
+                                </div>
+                                <div class="dropdown-item py-3 d-flex">
+                                    <div>
+                                        <div class="avatar bg-success text-white rounded-circle">KW</div>
+                                    </div>
+                                    <div class="flex-fill ms-3">
+                                        <div class="text-sm lg-snug w-64 text-wrap"><a
+                                                href="https://clever.webpixels.io/#"
+                                                class="font-semibold text-heading text-primary-hover">Robert</a> sent a
+                                            message to <a href="https://clever.webpixels.io/#"
+                                                          class="font-semibold text-heading text-primary-hover">Webpixels</a>
+                                        </div>
+                                        <span class="text-muted text-xs">30 mins ago</span></div>
+                                </div>
+                                <div class="dropdown-item py-3 d-flex">
+                                    <div><img alt="..." src="static/assets/css/img-4.jpg" class="avatar rounded-circle">
+                                    </div>
+                                    <div class="flex-fill ms-3">
+                                        <div class="text-sm lg-snug w-64 text-wrap"><a
+                                                href="https://clever.webpixels.io/#"
+                                                class="font-semibold text-heading text-primary-hover">Robert</a> sent a
+                                            message to <a href="https://clever.webpixels.io/#"
+                                                          class="font-semibold text-heading text-primary-hover">Webpixels</a>
+                                        </div>
+                                        <span class="text-muted text-xs">30 mins ago</span></div>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="dropdown-item py-2 text-center"><a href="https://clever.webpixels.io/#"
+                                                                               class="font-semibold text-muted text-primary-hover">View
+                                    all</a></div>
+                            </div>
+                        </div>
+                        <div class="dropdown"><a class="d-flex align-items-center" href="https://clever.webpixels.io/#"
+                                                 role="button" data-bs-toggle="dropdown" aria-haspopup="false"
+                                                 aria-expanded="false">
+                            <div>
+                                <div class="avatar avatar-sm bg-warning rounded-circle text-white"><img alt="..."
+                                                                                                        src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-372-456324.png">
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block ms-3"><span class="h6">User</span></div>
+                            <div class="d-none d-md-block ms-md-2"><i class="bi bi-chevron-down text-muted text-xs"></i>
+                            </div>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <div class="dropdown-header"><span
+                                        class="d-block text-sm text-muted mb-1">Signed in as</span> <span
+                                        class="d-block text-heading font-semibold">User</span></div>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://clever.webpixels.io/#"><i
+                                        class="bi bi-house me-3"></i>Home </a><a class="dropdown-item"
+                                                                                 href="https://clever.webpixels.io/#"><i
+                                    class="bi bi-pencil me-3"></i>Edit profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://clever.webpixels.io/#"><i
+                                        class="bi bi-gear me-3"></i>Settings </a><a class="dropdown-item"
+                                                                                    href="https://clever.webpixels.io/#"><i
+                                    class="bi bi-image me-3"></i>Media </a><a class="dropdown-item"
+                                                                              href="https://clever.webpixels.io/#"><i
+                                    class="bi bi-box-arrow-up me-3"></i>Share</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://clever.webpixels.io/#"><i
+                                        class="bi bi-person me-3"></i>Login</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+            <div class="flex-lg-1 h-screen overflow-y-lg-auto">
+                <header>
+                    <div class="container-fluid">
+                        <div class="border-bottom pt-6">
+                            <div class="row align-items-center">
+                                <div class="col-sm col-12"><h1 class="h2 ls-tight"><span
+                                        class="d-inline-block me-3">👋</span>Hi, User!</h1></div>
+                                <div class="col-sm-auto col-12 mt-4 mt-sm-0">
+                                    <div class="hstack gap-2 justify-content-sm-end"><a
+                                            href="https://clever.webpixels.io/#modalExport"
+                                            class="btn btn-sm btn-neutral border-base" data-bs-toggle="modal"><span
+                                            class="pe-2"><i class="bi bi-people-fill"></i> </span><span>Share</span>
+                                    </a><a href="https://clever.webpixels.io/#offcanvasCreate"
+                                           class="btn btn-sm btn-primary" data-bs-toggle="offcanvas"><span class="pe-2"><i
+                                            class="bi bi-plus-square-dotted"></i> </span><span>Create</span></a></div>
+                                </div>
+                            </div>
+                            <ul class="nav nav-tabs overflow-x border-0">
+                                <li class="nav-item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <main class="py-6 bg-surface-secondary">
+                    <div class="modal fade" id="modalExport" tabindex="-1" aria-labelledby="modalExport"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-3">
+                                <div class="modal-header">
+                                    <div class="icon icon-shape rounded-3 bg-soft-primary text-primary text-lg me-4"><i
+                                            class="bi bi-globe"></i></div>
+                                    <div><h5 class="mb-1">Share to web</h5><small class="d-block text-xs text-muted">Publish
+                                        and share link with anyone</small></div>
+                                    <div class="ms-auto">
+                                        <div class="form-check form-switch me-n2"><input class="form-check-input"
+                                                                                         type="checkbox"
+                                                                                         id="flexSwitchCheckChecked"
+                                                                                         checked="checked"> <label
+                                                class="form-check-label" for="flexSwitchCheckChecked"></label></div>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="d-flex align-items-center mb-5">
+                                        <div><p class="text-sm">Anyone with this link <span
+                                                class="font-bold text-heading">can view</span></p></div>
+                                        <div class="ms-auto"><a href="https://clever.webpixels.io/#"
+                                                                class="text-sm font-semibold">Settings</a></div>
+                                    </div>
+                                    <div>
+                                        <div class="input-group input-group-inline"><input type="email"
+                                                                                           class="form-control"
+                                                                                           placeholder="username"
+                                                                                           value="https://webpixels.io/your-amazing-link">
+                                            <span class="input-group-text"><i class="bi bi-clipboard"></i></span></div>
+                                        <span class="mt-2 valid-feedback">Looks good!</span></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="me-auto"><a href="https://clever.webpixels.io/#"
+                                                            class="text-sm font-semibold"><i
+                                            class="bi bi-clipboard me-2"></i>Copy link</a></div>
+                                    <button type="button" class="btn btn-sm btn-neutral" data-bs-dismiss="modal">Close
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-success">Share file</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row g-6 mb-6"></div>
+                        <div class="row g-6 mb-6">
+                            <div class="col-xl-2 col-sm-6 col-6" id="pending-orders-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col"><span
+                                                    class="h6 font-semibold text-muted text-sm d-block mb-2">Pending Orders</span>
+                                                <span class="h3 font-bold mb-0">{{pending_orders_count}}</span></div>
+                                            <div class="col-auto">
+                                                <div class="icon icon-shape bg-danger text-white text-lg rounded-circle">
+                                                    <i class="bi bi-exclamation-triangle"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm"><span class="text-nowrap text-xs text-muted">Pending Since : {{oldest_pending_days}} days</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-6 col-6" id="undelivered-orders-card">
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col"><span
+                                                    class="h6 font-semibold text-muted text-sm d-block mb-2">Undelivered Orders</span>
+                                                <span class="h3 font-bold mb-0">{{undelivered_orders_count}}</span></div>
+                                            <div class="col-auto">
+                                                <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
+                                                    <i class="bi bi-box"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm"><span class="text-nowrap text-xs text-muted">Pending Since : {{oldest_pending_days}} days</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-6 col-6" id="delivered-orders-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col"><span
+                                                    class="h6 font-semibold text-muted text-sm d-block mb-2">Delivered Orders</span>
+                                                <span class="h3 font-bold mb-0">{{delivered_orders_count}}</span></div>
+                                            <div class="col-auto">
+                                                <div class="icon icon-shape bg-success text-white text-lg rounded-circle">
+    <i class="bi bi-check-circle"></i>
+</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm"><span class="text-nowrap text-xs text-muted">  . </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-xl-2 col-sm-6 col-6" id="returned-orders-card">
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col"><span
+                                                    class="h6 font-semibold text-muted text-sm d-block mb-2">Returned Orders</span>
+                                                <span class="h3 font-bold mb-0">{{returned_orders_count}}</span></div>
+                                            <div class="col-auto">
+                                                <div class="icon icon-shape bg-danger text-white text-lg rounded-circle">
+    <i class="bi bi-arrow-return-left"></i>
+</div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="mt-2 mb-0 text-sm"><span class="text-nowrap text-xs text-muted"> . </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-6 col-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col"><span
+                                                    class="h6 font-semibold text-muted text-sm d-block mb-2">Dispatch Time</span>
+                                                <span class="h4 font-bold mb-0">24 Hours</span></div>
+                                            <div class="col-auto">
+                                                <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                                    <i class="bi bi-clock-history"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm"><span
+                                                class="badge badge-pill bg-soft-danger text-danger me-2"><i
+                                                class="bi bi-arrow-up me-1"></i>+10% </span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-6 col-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col"><span
+                                                    class="h6 font-semibold text-muted text-sm d-block mb-2">Delivery Ratio</span>
+                                                <span class="h3 font-bold mb-0">{{delivery_ratio}}%</span></div>
+                                            <div class="col-auto">
+                                                <div class="icon icon-shape bg-success text-white text-lg rounded-circle">
+                                                    <i class="bi bi-check2-square"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm"><span
+                                                class="badge badge-pill bg-soft-success text-success me-2"><i
+                                                class="bi bi-arrow-up me-1"></i>15% </span><span
+                                                class="text-nowrap text-xs text-muted">Since Last Month</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header border-bottom"><h5 class="mb-0">Recent Orders</h5></div>
+
+                            <div class="table-responsive">
+                            <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Select</th>
+            <th>Order No & <br> Tracking No</th>
+            <th>Order Date</th>
+            <th>Price</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Image</th>
+            <th>Order Status</th>
+            <th>Pending Since</th>
+            <th>Order Via</th>
+            <th>Shipped Via</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for order in orders %}
+<tr>
+    <td><input type="checkbox"></td>
+    <td>
+        {{ order.order_no }}<br>
+        {{ order.tracking_no }}
+    </td>
+    <td>{{ order.order_date.split('T')[0] }}</td>
+    <td>{{ order.price }}</td>
+    <ul><td>
+        {% for key, value in order.items() %}
+            {% if key == 'items' %}
+                {% for item in value %}
+                    {{ item['name'] }}<br><br><br>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </td>
+    <td>
+        {% for key, value in order.items() %}
+            {% if key == 'items' %}
+                {% for item in value %}
+                    {{ item['quantity'] }}<br><br><br>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </td>
+    <td>
+        {% for key, value in order.items() %}
+            {% if key == 'items' %}
+                {% for item in value %}
+                    {% if item['img_url'] %}
+                        <img src="{{ item['img_url'] }}" alt="Item Image" style="max-width: 50px; max-height: 50px;"><br><br>
+                    {% else %}
+                        No Image Available<br>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </td></ul>
+    <td>{{ order.order_status }}</td>
+    <td>{{ order.pending_since }} days</td>
+    <td>{{ order.order_via }}</td>
+    <td>{{ order.shipped_via }}</td> <!-- Update this with actual shipped via data -->
+    <td class="text-right">
+        <a href="{{ order.tracking_url }}" class="btn btn-sm btn-neutral">View</a>
+        <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
+            <i class="bi bi-box"></i>
+        </button>
+    </td>
+</tr>
+{% endfor %}
+    </tbody>
+</table>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                      <button id="reset-filters-btn" class="btn btn-primary">Reset Filters</button>
+
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // Function to hide all table body rows
+        function hideAllRows() {
+            $("tbody tr").hide();
+        }
+
+        // Function to show rows based on order status
+        function showRowsByStatus(status) {
+            $("tbody td:contains('" + status + "')").closest("tr").show();
+        }
+
+        // Function to reset filters and show all rows
+        function resetFilters() {
+            $("tbody tr").show();
+        }
+
+        // Click event for "Pending Orders" card
+        $("#pending-orders-card").click(function () {
+            hideAllRows();
+            showRowsByStatus("Booked & Pending");
+            showRowsByStatus("Pending");
+        });
+
+        // Click event for "Undelivered Orders" card
+        $("#undelivered-orders-card").click(function () {
+            hideAllRows();
+            showRowsByStatus("ARRIVED AT ORIGIN BRANCH");
+            showRowsByStatus("CONTACTING CONSIGNEE");
+            showRowsByStatus("REACHED AT DEST. BRANCH");
+            showRowsByStatus("OUT FOR DELIVERY");
+            showRowsByStatus("OUT FOR RETURN SUBMISSION");
+            showRowsByStatus("UNDELIVERED");
+            showRowsByStatus("MOVED TO DEST. BRANCH");
+            showRowsByStatus("MOVED TO ORIGIN BRANCH");
+        });
+
+        // Click event for "Delivered Orders" card
+        $("#delivered-orders-card").click(function () {
+            hideAllRows();
+            showRowsByStatus("DELIVERED");
+        });
+
+        // Click event for "Returned Orders" card
+        $("#returned-orders-card").click(function () {
+            hideAllRows();
+            showRowsByStatus("RETURN SUBMITTED");
+        });
+
+        // Click event for reset button
+        $("#reset-filters-btn").click(function () {
+            resetFilters();
+        });
+    });
+</script>
+
+<script>
+    window.onload = function () {
+        var loadingBar = document.getElementById('loading-bar');
+
+        function updateLoadingBar() {
+            var progress = (window.performance && window.performance.timing) ? Math.floor((window.performance.now() / window.performance.timing.domContentLoadedEventEnd) * 100) : 100;
+            loadingBar.style.width = progress + '%';
+            if (progress >= 100) {
+                setTimeout(function () {
+                    loadingBar.style.display = 'none';
+                }, 500); // Change delay as desired
+            }
+        }
+
+        updateLoadingBar();
+    };
+</script>
+
+</body>
+</html>
