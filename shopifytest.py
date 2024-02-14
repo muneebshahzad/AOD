@@ -11,7 +11,7 @@ app.secret_key = 'your_secret_key'
 shop_url = "https://08dc7a.myshopify.com/admin"
 shopify.ShopifyResource.set_site(shop_url)
 shopify.ShopifyResource.set_user(os.environ.get('SHOPIFY_USER'))
-shopify.ShopifyResource.set_password(os.environ.get('SHOPIFY_PASSWORD')
+shopify.ShopifyResource.set_password(os.environ.get('SHOPIFY_PASSWORD'))
 
 # Function to fetch order statuses in parallel
 def get_order_statuses(tracking_numbers):
