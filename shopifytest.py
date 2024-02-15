@@ -57,7 +57,7 @@ def get_orders():
     undelivered_orders_count = 0
     returned_orders_count = 0
     oldest_pending_days = 0
-    created_at_min = (datetime.now() - timedelta(days=30)).strftime('%Y-%m-%dT%H:%M:%S%z')
+    created_at_min = (datetime.now() - timedelta(days=25)).strftime('%Y-%m-%dT%H:%M:%S%z')
 
     # Set created_at_max to the current datetime
     created_at_max = datetime.now().strftime('%Y-%m-%dT%H:%M:%S%z')
